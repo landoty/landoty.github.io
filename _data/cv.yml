@@ -2,96 +2,99 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Landen Doty
     - name: Languages
-      value: English, German
+      value: English
+    - name: contact
+      value: landoty [at] ku [dot] edu
 
+- title: Academic Interests
+  type: list
+  contents:
+    - My current academic interests broadly include software and system security as it relates to cyber-physical systems and crtical infrastructure.
+    - Recently, I have found great inspiration in the areas of program analysis and reverse engineering and have began individual studies in exploit development.
+    - In addition, I believe the application of machine learning has just begun influencing the security community and will have significant application in the coming decades. As such, I have began exploring the fundamentals of machine learning to soon begin applying to my areas of interests.
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.S. Computer Science
+      institution: University of Kansas, Lawrence, Kansas
+      year: May 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - GPA (3.97)
+        - title: Relevant coursework
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+            - Cyber Defense
+            - Computer Architecture
+            - Data Structures and Algorithms
+            - Operating Systems
+            - Introduction to Computer Security
+            - Compiler Construction
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Security Engineer Future
+      institution: Netsmart Technologies, Overland Park, Kansas
+      year: Summer 2022
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Supported integration of new SOC/SIEM system(s) 
+        - Compiled detailed technical documentation
+        - title: Implemented security configuration changes including, but not limited to
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Firewall policy
+            - Certificate renewal
+            - User Access Control
+    - title: Student Data Networking Assistant
+      institution: University of Kansas IT, Network Architecture
+      year: 2021-2022
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Supported campus-wide network administration automation 
+        - Developed, orchestrated, and maintained internal automation tools in Python and Perl
+        - Created resources for onboarding of new hires and student assistants
+    - title: Undergraduate Research Assistant
+      institution: University of Kansas, EECS, Dr. Tamzidul Hoque
+      year: 2020-2021
       description:
+        - title: Engaged in multiple hardware security efforts including
+          contents:
+            - Digital Rights Management
+            - FPGA Cloud
+        - Analyzed existing literature and state-of-the art hardware solutions
+        - Served as team lead in multi-university collaboration
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
+- title: Skills
+  type: list
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - 'o Programming Languages: C/C++, Python, Bash, x64 Assembly'
+    - 'o Software Analysis: gdb, WinDbg, IDA, Ghidra'
+    - 'o Network Analysis: Wireshark, Nmap'
+    - 'o Computer Networking: TCP/IP, service configuration, firewall administration, routing and switching'
+    - 'o Mathematics: Statistics, Computational Theory, Calculus, Linear Algebra'
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+        - Cybercorps Scholarship for Service (SFS)
+        - Dean's Honors List
+        - Victor Simon Memorial Scholarship (Theta Chi Fraternity)
 
-- title: Academic Interests
-  type: nested_list
+- title: Leadership and Volunteering Activities
+  type: time_table
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+  - year: 2023
+    description: 'Volunteered at the annual Big Event'
+  - year: 2021 - Now
+    description:
+      - 'KU Information Security Club'
+      - '-    Currently serving as Treasurer'
+      - '-    Served as President (2022-23)'
+      - '-    Served as Chief Technology Officer (2021-22)'
+  - year: 2020 - Now
+    description:
+      - 'Theta Chi Fraternity'
+      - '-    Currently serving as Standards Board Chairman'
+      - '-    Served as Vice President (2021-22)'
+      - '-    Served as Scholarship Chairman (2020-21)'
