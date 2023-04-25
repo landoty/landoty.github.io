@@ -1,1 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://landoty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://landoty.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-24T06:51:58+00:00</updated><id>https://landoty.github.io/feed.xml</id><title type="html">Landen Doty</title></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://landoty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://landoty.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-25T19:45:47+00:00</updated><id>https://landoty.github.io/feed.xml</id><title type="html">Landen Doty</title><entry><title type="html">Pwn.College Reverse Engineering</title><link href="https://landoty.github.io/blog/2023/pwnCollege-revEng/" rel="alternate" type="text/html" title="Pwn.College Reverse Engineering" /><published>2023-04-25T00:00:00+00:00</published><updated>2023-04-25T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2023/pwnCollege-revEng</id><content type="html" xml:base="https://landoty.github.io/blog/2023/pwnCollege-revEng/"><![CDATA[<h3 id="challenge-10">Challenge 1.0</h3>
+
+<ul>
+  <li>
+    <p>The challenge compares a user-input “license key” with the expected value.</p>
+  </li>
+  <li>
+    <p>The output of the program gives us insight into how our input is formatted and compared against the expected value</p>
+
+    <p><img src="/assets/img/blog/pwn-rev1-1.png" class="img-fluid" /></p>
+  </li>
+  <li>
+    <p>As we can see, the first 5 ASCII characters are consumed, converted to hex, and compared against the expected value</p>
+  </li>
+  <li>
+    <p>We can simply convert the expected hex values to ASCII and supply as input to the challenge</p>
+  </li>
+</ul>
+
+<details><summary><b>Solution</b></summary>
+<p>
+
+```bash
+    $ python -c "print(chr(0x75)+chr(0x6d)+chr(0x6e)+chr(0x75)+chr(0x64))" | /challenge/babyrev_level1.0
+```
+</p>
+</details>
+
+<h3 id="challenge-11">Challenge 1.1</h3>
+
+<ul>
+  <li>
+    <p>This challenge is still comparing an user-input “license key” against the expected value.</p>
+  </li>
+  <li>
+    <p>However, we are no longer provided any information about how our key is processed and what the expected value is…time to reverse!</p>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <p><strong>Debugging Symbols</strong> =&gt; None :/</p>
+
+    <p><img src="/assets/img/blog/pwn-rev1-2.png" class="img-fluid" /></p>
+  </li>
+  <li>
+    <p><strong>Strings</strong> =&gt; ;)</p>
+
+    <ul>
+      <li>
+        <p>Using the <em>strings</em> command and grep’ing for a 5-length string, we get something promising…</p>
+
+        <p><img src="/assets/img/blog/pwn-rev1-3.png" class="img-fluid" /></p>
+      </li>
+      <li>
+        <p>Let’s modify this command to just pipe to the challenge binary:</p>
+
+        <details><summary><b>Solution</b></summary>
+  <p>
+        
+  ```bash
+      $ strings /challenge/babyrev_level1.1 | egrep -E "^z.{4}" | /challenge/babyrev_level1.1
+  ```
+  </p>
+  </details>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>BONUS: .data</strong></p>
+
+    <ul>
+      <li>
+        <p>We can also dump the data section to read the license key (just as <em>strings</em> does)</p>
+
+        <p><img src="/assets/img/blog/pwn-rev1-4.png" class="img-fluid" /></p>
+      </li>
+    </ul>
+  </li>
+</ol>]]></content><author><name></name></author><category term="ctf" /><summary type="html"><![CDATA[uploading some previous solutions from Pwn.College]]></summary></entry></feed>
