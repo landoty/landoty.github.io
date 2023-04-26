@@ -67,7 +67,7 @@
   type: list
   contents:
     - 'o Programming Languages: C/C++, Python, Bash, x64 Assembly'
-    - 'o Software Analysis: gdb, WinDbg, IDA, Ghidra'
+    - 'o Software Analysis: gdb, WinDbg, IDA, Ghidra, LLVM'
     - 'o Network Analysis: Wireshark, Nmap'
     - 'o Computer Networking: TCP/IP, service configuration, firewall administration, routing and switching'
     - 'o Mathematics: Statistics, Computational Theory, Calculus, Linear Algebra'
