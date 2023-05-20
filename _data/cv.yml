@@ -21,7 +21,7 @@
       institution: University of Kansas, Lawrence, Kansas
       year: May 2024
       description:
-        - GPA (3.97)
+        - GPA (3.98)
         - title: Relevant coursework
           contents:
             - Cyber Defense
@@ -34,6 +34,12 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Cybersecurity R&D Intern
+      institution: Sandia National Laboratories, Albuquerque, NM
+      year: Summer 2023
+      description:
+        - Supporting ongoing cybersecurity research projects
+        - Project topics TBA
     - title: Security Engineer Future
       institution: Netsmart Technologies, Overland Park, Kansas
       year: Summer 2022
