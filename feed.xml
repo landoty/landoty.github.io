@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://landoty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://landoty.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-20T17:45:36+00:00</updated><id>https://landoty.github.io/feed.xml</id><title type="html">Landen Doty</title><entry><title type="html">What I’m Reading (and why)</title><link href="https://landoty.github.io/blog/2023/what-im-reading/" rel="alternate" type="text/html" title="What I’m Reading (and why)" /><published>2023-04-26T00:00:00+00:00</published><updated>2023-04-26T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2023/what-im-reading</id><content type="html" xml:base="https://landoty.github.io/blog/2023/what-im-reading/"><![CDATA[<h3 id="a-gentleman-in-moscow---amor-towles">A Gentleman in Moscow - Amor Towles</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://landoty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://landoty.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-27T03:50:22+00:00</updated><id>https://landoty.github.io/feed.xml</id><title type="html">Landen Doty</title><entry><title type="html">Hack the Box - Exatlon Writeup</title><link href="https://landoty.github.io/blog/2023/htb-exatlon/" rel="alternate" type="text/html" title="Hack the Box - Exatlon Writeup" /><published>2023-05-26T00:00:00+00:00</published><updated>2023-05-26T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2023/htb-exatlon</id><content type="html" xml:base="https://landoty.github.io/blog/2023/htb-exatlon/"><![CDATA[<h3 id="initial-analysis">Initial Analysis</h3>
+
+<p>Download the challenge materials from Hack the Box, create a directory, extract, ready to go. We get a single executable, <em>exatlon_v1</em>. Run <em>file</em> to see what we’re working with.</p>
+
+<p><img src="/assets/img/blog/htb-exatlon-1.png" class="img-fluid" /></p>
+
+<p>No section header AND statically linked?? Let’s toss it in IDA and see what’s going on…</p>
+
+<p><img src="/assets/img/blog/htb-exatlon-2.png" class="img-fluid" /></p>
+
+<p>Ok, yep, this is a mess. The binary has pretty clearly been compressed or packed. Recently, I’ve been utilizing IDA’s string view instead of the default Unix <em>strings</em> command. Let’s see what we get.</p>
+
+<p><img src="/assets/img/blog/htb-exatlon-3.png" class="img-fluid" /></p>
+
+<p>Ahhhh, there we go. <a href="https://github.com/upx/upx">UPX</a>, the <em>“Ultimate Packer for eXecutables”</em> was used here to compress the binary. After downloading the repo and building from source, UPX also provides a decompress or unpack option. Use this and reload the new binary into IDA.</p>
+
+<p><img src="/assets/img/blog/htb-exatlon-4.png" class="img-fluid" /></p>
+
+<h3 id="source-analysis">Source Analysis</h3>
+
+<blockquote>
+  <p><strong>NOTE:</strong> Recall the binary is statically linked, so whichever libraries are included to make it work will be fully compiled into the binary and included in IDA’s analysis.</p>
+</blockquote>
+
+<p>After loading the decompressed binary, we see all of those imports. Note the name mangling, so we’re working with a binary compiled from C++! Thankfully, it’s not stripped, so let’s find the <em>main</em> function and see what’s going on.</p>
+
+<p><img src="/assets/img/blog/htb-exatlon-5.png" class="img-fluid" /></p>
+
+<p>If you expand the image above from IDA, you can see that after prompting for the password, a call is made to function <em>exatlon</em>, followed by a (wacky) overloaded <em>==</em>. Also following the call to <em>exatlon</em>, a strange string of numbers.</p>
+
+<p>Now, I should admit the rabbit hole I went down, trying to understand the various standard libary classes used here (char_traits, basic_string, etc.) to make sense of the equivalence operator. After a bit of frustration, I figured it was time for dynamic analysis…</p>
+
+<h3 id="dynamic-analysis-in-gdb">Dynamic Analysis in GDB</h3>
+
+<p>The workflow here isn’t too complicated…set a breakpoint for the instruction following the call to <em>exatlon</em>, walkthrough the next few instructions before the <em>==</em> operator, and check out the registers.</p>
+
+<p>When running, just give a single character; I did ‘a’.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>b exatlon(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)
+run
+step
+ni 2
+info registers
+</code></pre></div></div>
+<p>At this point, the registers don’t look too promising…shouldn’t <em>rax</em> just have 0x61? If you’re running a standard gdb configuration, it might not be too obvious, but thanks to <a href="https://hugsy.github.io/gef/">gef</a>, or <em>GDB Enhanced Features</em>, this one jumped out at me pretty clearly.</p>
+
+<p><img src="/assets/img/blog/htb-exatlon-7.png" class="img-fluid" /></p>
+
+<p>What the function <em>exatlon</em> is doing, is actually returning a string via a char pointer (char *). We can confirm this by examining the value of <em>rax</em>. Note, I use char ** here as <em>rax</em> contains a pointer to the string.</p>
+
+<p><img src="/assets/img/blog/htb-exatlon-8.png" class="img-fluid" /></p>
+
+<p>Here, I make an assumption that <em>exatlon</em> takes an input string, does some defined computation on it, and returns a string derived from that computation. Then, the input-derived string is compared with the string we see loaded into <em>rsi</em> in which the program terminates on a match.</p>
+
+<h3 id="solution">Solution</h3>
+
+<p>So, if we can get the “exatlon-d” representation of <em>every</em> ASCII character, we can just map each value in the string being compared to it’s ASCII representation. This should get the flag.</p>
+
+<ol>
+  <li>
+    <p>Get all <em>printable</em> ASCII characters</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> python3 <span class="nt">-c</span> <span class="s1">'for i in range(33,127):print(chr(i), end="")'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run binary inside gdb, giving the ascii characters as the “password”</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> b exatlon(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)
+ run
+ step
+ ni 2
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Inspect the value of <em>rax</em> to get the “exatlon-d” string</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x/s *(char **)$rax
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Script for solution</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Printable ascii chars and their representations after going through exatlon function
+</span> <span class="n">ascii_chars</span> <span class="o">=</span> <span class="sh">"</span><span class="s">!</span><span class="se">\"</span><span class="s">#$%&amp;</span><span class="sh">'</span><span class="s">()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</span><span class="sh">"</span>
+ <span class="n">ascii_chars_exatlon</span> <span class="o">=</span> <span class="sh">"</span><span class="s">528 544 560 576 592 608 624 640 656 672 688 704 720 736 752 768 784 800 816 832 848 864 880 896 912 928 944 960 976 992 1008 1024 1040 1056 1072 1088 1104 1120 1136 1152 1168 1184 1200 1216 1232 1248 1264 1280 1296 1312 1328 1344 1360 1376 1392 1408 1424 1440 1456 1472 1488 1504 1520 1536 1552 1568 1584 1600 1616 1632 1648 1664 1680 1696 1712 1728 1744 1760 1776 1792 1808 1824 1840 1856 1872 1888 1904 1920 1936 1952 1968 1984 2000 2016</span><span class="sh">"</span>
+
+ <span class="c1"># Exatlon-form flag found in binary
+</span> <span class="n">flag_exatlon</span> <span class="o">=</span> <span class="sh">"</span><span class="s">1152 1344 1056 1968 1728 816 1648 784 1584 816 1728 1520 1840 1664 784 1632 1856 1520 1728 816 1632 1856 1520 784 1760 1840 1824 816 1584 1856 784 1776 1760 528 528 2000</span><span class="sh">"</span>
+
+ <span class="c1"># list-ify each
+</span> <span class="n">ascii_chars</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">ascii_chars</span><span class="p">)</span>
+ <span class="n">ascii_chars_exatlon</span> <span class="o">=</span> <span class="n">ascii_chars_exatlon</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="s"> </span><span class="sh">"</span><span class="p">)</span>
+ <span class="n">flag_exatlon</span> <span class="o">=</span> <span class="n">flag_exatlon</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="s"> </span><span class="sh">"</span><span class="p">)</span>
+
+ <span class="n">ascii_exatlon_dict</span> <span class="o">=</span> <span class="nf">dict</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="n">ascii_chars_exatlon</span><span class="p">,</span> <span class="n">ascii_chars</span><span class="p">))</span>
+
+ <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">flag_exatlon</span><span class="p">:</span>
+     <span class="nf">print</span><span class="p">(</span><span class="n">ascii_exatlon_dict</span><span class="p">[</span><span class="n">char</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="sh">""</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ol>]]></content><author><name></name></author><category term="ctf" /><summary type="html"><![CDATA[Challenge writeup]]></summary></entry><entry><title type="html">What I’m Reading (and why)</title><link href="https://landoty.github.io/blog/2023/what-im-reading/" rel="alternate" type="text/html" title="What I’m Reading (and why)" /><published>2023-04-26T00:00:00+00:00</published><updated>2023-04-26T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2023/what-im-reading</id><content type="html" xml:base="https://landoty.github.io/blog/2023/what-im-reading/"><![CDATA[<h3 id="a-gentleman-in-moscow---amor-towles">A Gentleman in Moscow - Amor Towles</h3>
 
 <p><img style="float:left; max-width: 20%; max-height: 30%; display:flex;" class="pr-3" src="/assets/img/blog/gentleman_in_moscow.jpeg" /></p>
 
