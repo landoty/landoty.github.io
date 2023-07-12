@@ -11,8 +11,8 @@
 - title: Academic Interests
   type: list
   contents:
-    - My current academic interests broadly include software and system security as it relates to cyber-physical systems and crtical infrastructure.
-    - Recently, I have found great inspiration in the areas of program analysis and reverse engineering and have began individual studies in exploit development.
+    - My current academic interests broadly include program analysis and reverse engineering including general computing systems as well as mobile and embedded platforms.
+    - Recently, I have found great interests in static analysis techniques and novel approaches to program analysis for critical software systems.
     - In addition, I believe the application of machine learning has just begun influencing the security community and will have significant application in the coming decades. As such, I have began exploring the fundamentals of machine learning to soon begin applying to my areas of interests.
 - title: Education
   type: time_table
@@ -34,12 +34,13 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Cybersecurity R&D Intern
+    - title: Cybersecurity R&D Summer Intern, TITANS
       institution: Sandia National Laboratories, Albuquerque, NM
       year: Summer 2023
       description:
-        - Supporting ongoing cybersecurity research projects
-        - Project topics TBA
+        - Contributed to ongoing program analysis and reverse engineering projects
+        - Developed an IDA Pro plugin to correlate SARIF results gathered from static analysis tools with loaded binary to support malware analysts
+        - Created simulation procedures for symbolic execution framework used in vulnerability analysis
     - title: Security Engineer Future
       institution: Netsmart Technologies, Overland Park, Kansas
       year: Summer 2022
@@ -72,9 +73,9 @@
 - title: Skills
   type: list
   contents:
-    - 'o Programming Languages: C/C++, Python, Bash, x64 Assembly'
-    - 'o Software Analysis: gdb, WinDbg, IDA, Ghidra, LLVM'
-    - 'o Network Analysis: Wireshark, Nmap'
+    - 'o Reverse engineering experience analyzing binaries of various types: x64, x86, ARM, C, C++'
+    - 'o Software development: C/C++, Python, LLVM, Bash, Haskell, and Ocaml'
+    - 'o Analysis tools: such as IDA Pro, Ghidra, GDB, Angr, Wireshark'
     - 'o Computer Networking: TCP/IP, service configuration, firewall administration, routing and switching'
     - 'o Mathematics: Statistics, Computational Theory, Calculus, Linear Algebra'
 
