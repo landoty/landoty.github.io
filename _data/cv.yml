@@ -12,24 +12,36 @@
   type: list
   contents:
     - My current academic interests broadly include program analysis and reverse engineering including general computing systems as well as mobile and embedded platforms.
-    - Recently, I have found great interests in static analysis techniques and novel approaches to program analysis for critical software systems.
-    - In addition, I believe the application of machine learning has just begun influencing the security community and will have significant application in the coming decades. As such, I have began exploring the fundamentals of machine learning to soon begin applying to my areas of interests.
+    - Recently, I have found great interests in binary analysis to facilitate software understanding when source language artifacts are not available.
+    - I have been accepted into the Master's of Science in Computer Science program at the University of Kansas. My interests in these areas will continue in my thesis work, which will focus on the analysis of binaries produced by the Rust language.
+
 - title: Education
   type: time_table
   contents:
+    - title: M.S. Computer Science
+      institution: University of Kansas, Lawrence, Kansas
+      year: May 2025
+      description:
+        - title: Enrolled for Spring 2024
+          contents:
+            - Mobile Security
+            - Advanced Operating Systems
+            - Software Modeling and Analysis
+
     - title: B.S. Computer Science
       institution: University of Kansas, Lawrence, Kansas
       year: May 2024
       description:
-        - GPA (3.98)
+        - GPA (3.97)
         - title: Relevant coursework
           contents:
-            - Cyber Defense
+            - Cryptograph and Computer Security (Graduate)
+            - Secure Software Evaluation
+            - Compiler Construction
+            - Operating Systems
             - Computer Architecture
             - Data Structures and Algorithms
-            - Operating Systems
-            - Introduction to Computer Security
-            - Compiler Construction
+            - Applied Mathematical Statistics
 
 - title: Experience
   type: time_table
