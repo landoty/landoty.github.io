@@ -1,10 +1,27 @@
 ---
 layout: post
 title: Reading list (running)
-date: 2023-June-30
+date: 2024-January-1
 description: keeping track of what I'm reading
 tags: books
 ---
+
+### October - December 2023
+
+- A whole lot of research papers
+    - Presented on [Shuffler](https://www.usenix.org/system/files/conference/osdi16/osdi16-williams-king.pdf) for EECS765
+    - A few other favorites:
+        - [RuntimeASLR](http://wenkewww.gtisc.gatech.edu/papers/runtimeaslr-ndss16.pdf)
+        - [How Do Programmers Unsafe Rust](https://dl.acm.org/doi/pdf/10.1145/3428204)
+        - [Combining E-Graphs with Abstract Interpreation](https://arxiv.org/pdf/2205.14989.pdf)
+
+### September 2023
+
+- Thinking in Systems: A Primer, Donella Meadows
+
+### August 2023
+
+- When Einstein Walked With Gödel: Excursions to the Edge of Thought, Jim Holt
 
 ### June 2023
 
