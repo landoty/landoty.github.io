@@ -6,6 +6,13 @@ description: keeping track of what I'm reading
 tags: books
 ---
 
+### January 2024
+- American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer
+- More research papers:
+    - [FFIChecker](https://zhuohua.me/assets/ESORICS2022-FFIChecker.pdf)
+    - [SafeDrop](https://arxiv.org/abs/2103.15420)
+    - [BVT Scheduler](https://rcs.uwaterloo.ca/papers/bvt.pdf)
+
 ### October - December 2023
 
 - A whole lot of research papers
