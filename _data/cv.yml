@@ -51,8 +51,6 @@
       year: Summer 2023
       description:
         - Contributed to ongoing program analysis and reverse engineering projects
-        - Developed an IDA Pro plugin to correlate SARIF results gathered from static analysis tools with loaded binary to support malware analysts
-        - Created simulation procedures for symbolic execution framework used in vulnerability analysis
     - title: Security Engineer Future
       institution: Netsmart Technologies, Overland Park, Kansas
       year: Summer 2022
@@ -85,35 +83,43 @@
 - title: Skills
   type: list
   contents:
-    - 'o Reverse engineering experience analyzing binaries of various types: x64, x86, ARM, C, C++'
-    - 'o Software development: C/C++, Python, LLVM, Bash, Haskell, and Ocaml'
-    - 'o Analysis tools: such as IDA Pro, Ghidra, GDB, Angr, Wireshark'
-    - 'o Computer Networking: TCP/IP, service configuration, firewall administration, routing and switching'
-    - 'o Mathematics: Statistics, Computational Theory, Calculus, Linear Algebra'
+    - '<b>Binary RE:</b> x64, x86, ARM, C, C++'
+    - '<b>Software development:</b> C/C++, Python, Rust, LLVM, Bash, Haskell, and Ocaml'
+    - '<b>Exploitation Techniques:</b> (S/B/JIT)ROP, Windows SEH Corruption, Linux Heap Corruption'
+    - '<b>Analysis tools:</b> IDA Pro, Ghidra, GDB, Angr, Wireshark'
+    - '<b>Computer Networking:</b> TCP/IP, service configuration, firewall administration, routing and switching'
+    - '<b>Mathematics:</b> Statistics, Computational Theory, Calculus, Linear Algebra'
 
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2023
+      items:
+      - Dean's Honors List
+      - New Graduate Student Scholarship
     - year: 2022
       items: 
-        - Cybercorps Scholarship for Service (SFS)
-        - Dean's Honors List
-        - Victor Simon Memorial Scholarship (Theta Chi Fraternity)
+      - Cybercorps Scholarship for Service (SFS)
+      - Dean's Honors List
+      - Victor Simon Memorial Scholarship
+    - year: 2021
+      items:
+      - Dean's Honors List
+      - Victor Simon Memorial Scholarship
+    - year: 2020
+      items:
+      - Dean's Honors List
 
-- title: Leadership and Volunteering Activities
+- title: Leadership, Volunteering, and Involvement
   type: time_table
   contents:
-  - year: 2023
-    description: 'Volunteered at the annual Big Event'
+  - year: 2022 - Now
+    description:
+      - 'Upsilon Pi Epsilon Honor Society'
+      - 'Big Event at KU'
   - year: 2021 - Now
     description:
-      - 'KU Information Security Club'
-      - '-    Currently serving as Treasurer'
-      - '-    Served as President (2022-23)'
-      - '-    Served as Chief Technology Officer (2021-22)'
+      - "KU Information Security Club (President '22/23, CTO '21/22)"
   - year: 2020 - Now
     description:
-      - 'Theta Chi Fraternity'
-      - '-    Currently serving as Standards Board Chairman'
-      - '-    Served as Vice President (2021-22)'
-      - '-    Served as Scholarship Chairman (2020-21)'
+      - "Theta Chi Fraternity (Vice President '22/23, Scholarship Chairman '21/22)"
