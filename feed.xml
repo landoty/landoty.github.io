@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://landoty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://landoty.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-01-23T20:03:53+00:00</updated><id>https://landoty.github.io/feed.xml</id><title type="html">Landen Doty</title><entry><title type="html">Accelerating Rust Binary RE - Ideas and Goals</title><link href="https://landoty.github.io/blog/2024/my-research/" rel="alternate" type="text/html" title="Accelerating Rust Binary RE - Ideas and Goals" /><published>2024-01-23T00:00:00+00:00</published><updated>2024-01-23T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2024/my-research</id><content type="html" xml:base="https://landoty.github.io/blog/2024/my-research/"><![CDATA[<p>In the rapidly-evolving landscape of binary reverse engineering, the emergence of new languages present new and unique challenges for analysts and reverse engineers. As I begin my graduate studies, I will be exploring novel techniques to accelerate Rust binary RE with the goal of providing a more efficient and effective experience to RE practicioners.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://landoty.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://landoty.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-16T18:36:29+00:00</updated><id>https://landoty.github.io/feed.xml</id><title type="html">Landen Doty</title><entry><title type="html">Accelerating Rust Binary RE - Ideas and Goals</title><link href="https://landoty.github.io/blog/2024/my-research/" rel="alternate" type="text/html" title="Accelerating Rust Binary RE - Ideas and Goals" /><published>2024-01-23T00:00:00+00:00</published><updated>2024-01-23T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2024/my-research</id><content type="html" xml:base="https://landoty.github.io/blog/2024/my-research/"><![CDATA[<p>In the rapidly-evolving landscape of binary reverse engineering, the emergence of new languages present new and unique challenges for analysts and reverse engineers. As I begin my graduate studies, I will be exploring novel techniques to accelerate Rust binary RE with the goal of providing a more efficient and effective experience to RE practicioners.</p>
 
 <h2 id="1-efficient-decompilation">1. Efficient Decompilation</h2>
 
@@ -16,7 +16,18 @@
 
 <p>Research is only impactful if it translates into practical tools that can be readily utilized by the community. My final goal revolves around developing user-friendly tools that cater to the aforementioned objectives. To ensure accessibility specific to the RE community, I will focus mainly on integrating my results with the Ghidra SRE suite.</p>
 
-<p>Stay tuned for further updates on this work. Feel free to contact me if you are interested in collaborating!</p>]]></content><author><name></name></author><category term="research" /><summary type="html"><![CDATA[A short on my research goals]]></summary></entry><entry><title type="html">Reading list (running)</title><link href="https://landoty.github.io/blog/2024/what-im-reading/" rel="alternate" type="text/html" title="Reading list (running)" /><published>2024-01-01T00:00:00+00:00</published><updated>2024-01-01T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2024/what-im-reading</id><content type="html" xml:base="https://landoty.github.io/blog/2024/what-im-reading/"><![CDATA[<h3 id="january-2024">January 2024</h3>
+<p>Stay tuned for further updates on this work. Feel free to contact me if you are interested in collaborating!</p>]]></content><author><name></name></author><category term="research" /><summary type="html"><![CDATA[A short on my research goals]]></summary></entry><entry><title type="html">Reading list</title><link href="https://landoty.github.io/blog/2024/what-im-reading/" rel="alternate" type="text/html" title="Reading list" /><published>2024-01-01T00:00:00+00:00</published><updated>2024-01-01T00:00:00+00:00</updated><id>https://landoty.github.io/blog/2024/what-im-reading</id><content type="html" xml:base="https://landoty.github.io/blog/2024/what-im-reading/"><![CDATA[<h3 id="february">February</h3>
+<ul>
+  <li>Still working on American Prometheus</li>
+  <li>Some papers I liked this month:
+    <ul>
+      <li><a href="https://ieeexplore.ieee.org/document/9519385">Android Custom Permissions Demystified</a></li>
+      <li><a href="https://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf">Xen and the Art of Virtualization</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="january-2024">January 2024</h3>
 <ul>
   <li>American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer</li>
   <li>More research papers:
