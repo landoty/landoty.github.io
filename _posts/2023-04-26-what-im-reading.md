@@ -1,10 +1,16 @@
 ---
 layout: post
-title: Reading list (running)
+title: Reading list
 date: 2024-January-1
 description: keeping track of what I'm reading
 tags: books
 ---
+
+### February
+- Still working on American Prometheus
+- Some papers I liked this month:
+    - [Android Custom Permissions Demystified](https://ieeexplore.ieee.org/document/9519385)
+    - [Xen and the Art of Virtualization](https://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf)
 
 ### January 2024
 - American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer
