@@ -6,7 +6,7 @@ subtitle: University of Kansas, Lawrence, Kansas, USA
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: blog_img.JPG
   image_circular: false 
 
 news: true  
