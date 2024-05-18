@@ -75,7 +75,7 @@ contact_note: >
 
 blog_name: my blog
 blog_nav_title: blog
-blog_description: a little bit of everything - CTFs, reading, etc.
+blog_description: a little bit of everything
 permalink: /blog/:year/:title/
 
 # Pagination

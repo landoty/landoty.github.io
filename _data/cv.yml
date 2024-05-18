@@ -22,6 +22,7 @@
       institution: University of Kansas, Lawrence, Kansas
       year: May 2025
       description:
+        - GPA (4.0)
         - title: Enrolled for Spring 2024
           contents:
             - Mobile Security
@@ -46,6 +47,11 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Cybersecurity R&D Year-Round Intern, TITANS
+      institution: Sandia National Laboratories, Albuquerque, NM (Hybrid)
+      year: Aug. 2023 - Current
+      description:
+        - Continuing work on program analysis (static analysis, improving precision)
     - title: Cybersecurity R&D Summer Intern, TITANS
       institution: Sandia National Laboratories, Albuquerque, NM
       year: Summer 2023
@@ -87,12 +93,16 @@
     - '<b>Software development:</b> C/C++, Python, Rust, LLVM, Bash, Haskell, and Ocaml'
     - '<b>Exploitation Techniques:</b> (S/B/JIT)ROP, Windows SEH Corruption, Linux Heap Corruption'
     - '<b>Analysis tools:</b> IDA Pro, Ghidra, GDB, Angr, Wireshark'
+    - '<b>Formal Methods:</b> Coq, General Formal Logic' 
     - '<b>Computer Networking:</b> TCP/IP, service configuration, firewall administration, routing and switching'
     - '<b>Mathematics:</b> Statistics, Computational Theory, Calculus, Linear Algebra'
 
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2024
+      items:
+      - Most Outstanding Senior in Computer Science
     - year: 2023
       items:
       - Dean's Honors List
