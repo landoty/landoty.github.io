@@ -3,16 +3,17 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Landen Doty</title>
+    <title>Evaluating BSim for Rust | Landen Doty</title>
     <meta name="author" content="Landen  Doty">
-    <meta name="description" content="">
+    <meta name="description" content="Research project investigating effecicacy of Ghidra's BSim on Rust binaries">
 
 
     <!-- Bootstrap & MDB -->
@@ -32,7 +33,7 @@
     <link rel="shortcut icon" href="/assets/img/ld.png">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://landoty.github.io/">
+    <link rel="canonical" href="https://landoty.github.io/projects/bsim/">
     
     <!-- Dark Mode -->
     
@@ -53,7 +54,7 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
-          
+          <a class="navbar-brand title font-weight-lighter" href="/">Landen Doty</a>
           <!-- Navbar Toggle -->
           <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -66,8 +67,8 @@
             <ul class="navbar-nav ml-auto flex-nowrap">
 
               <!-- About -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/">about<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
               </li>
               
               <!-- Blog -->
@@ -106,144 +107,20 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- about.html -->
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-           Landen Doty
-          </h1>
-          <p class="desc">University of Kansas, Lawrence, Kansas, USA</p>
-        </header>
+      <!-- page.html -->
+        <div class="post">
 
-        <article>
-          <div class="profile float-right">
+          <header class="post-header">
+            <h1 class="post-title">Evaluating BSim for Rust</h1>
+            <p class="post-description">Research project investigating effecicacy of Ghidra's BSim on Rust binaries</p>
+          </header>
 
-              <figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/blog_img.JPG" class="img-fluid z-depth-1 rounded" width="auto" height="auto" max-width="20%" alt="blog_img.JPG" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-          </div>
-
-          <div class="clearfix">
-            <p>I am a graduate student at the University of Kansas, studying computer science with an emphasis in systems security and programming languages. I am currently working on a project evaluating the effect of source language on binary analysis tools - particularly, BSim, a binary similarity tool included in the Ghidra SRE Framework. I am advised by <a href="http://www.ittc.ku.edu/~kulkarni/" rel="external nofollow noopener" target="_blank">Dr. Prasad Kulkarni</a> and am set to defend my Masters Thesis in the Spring of 2025!</p>
-
-<p>During my time at KU, I have discovered a passion for both security and programming languages, so I tend to spend time thinking about how language constructs and compilers affect certain security properties. I particularly enjoy building better tools for RE/VR practicioners, applying concepts from the PL community. I also do a bit of reverse engineering work and am currently working on my Offensive Security Exploit Developer certification.</p>
-
-<p>Feel free to reach out if you are interested in collaborating!</p>
-
-          </div>
-
-          <!-- News -->
-          <h2><a href="/news/" style="color: inherit;">news</a></h2>
-          <div class="news">
-            <div class="table-responsive">
-              <table class="table table-sm table-borderless">
-              
-                <tr>
-                  <th scope="row">May 12, 2024</th>
-                  <td>
-                    Graduated from the University of Kansas with a BS in Computer Science!
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Apr 25, 2024</th>
-                  <td>
-                    Awarded the Outstanding Senior Achievement Award in Computer Science at KU EECS!
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Apr 8, 2024</th>
-                  <td>
-                    Nominated for the Sammie and Carl Locke Award for Outstanding Senior in the School of Engineering.
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Sep 30, 2023</th>
-                  <td>
-                    Accepted into the Master’s of Science in Computer Science program at KU. Coursework and research to include security of system-level software and programming languages.
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">May 20, 2023</th>
-                  <td>
-                    Starting at Sandia National Laboratories as a Cybersecurity R&amp;D Intern!
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Apr 23, 2023</th>
-                  <td>
-                    New blog page launched!
-
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-
-
-          <!-- Latest posts -->
-          <h2><a href="/blog/" style="color: inherit;">latest posts</a></h2>
-          <div class="news">
-            <div class="table-responsive" style="max-height: 10vw">
-              <table class="table table-sm table-borderless">
-              
-                <tr>
-                  <th scope="row">Mar 2, 2024</th>
-                  <td>
-                    <a class="news-title" href="/blog/2024/using-Z3-ctf/">SMT Solvers for CTFs</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Jan 23, 2024</th>
-                  <td>
-                    <a class="news-title" href="/blog/2024/my-research/">Accelerating Rust Binary RE - Ideas and Goals</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Jan 1, 2024</th>
-                  <td>
-                    <a class="news-title" href="/blog/2024/what-im-reading/">Reading list</a>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-
-
-          <!-- Selected papers -->
-          
-
-          <!-- Social -->
-            <div class="social">
-              <div class="contact-icons">
-                <a href="mailto:%6C%61%6E%64%6F%74%79@%6B%75.%65%64%75" title="email"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/landoty" title="GitHub" rel="external nofollow noopener" target="_blank"><i class="fab fa-github"></i></a>
+          <article>
             
 
-              </div>
+          </article>
 
-              <div class="contact-note">
-                Please reach out via email if you require response!
-
-              </div>
-
-            </div>
-        </article>
-
-</div>
+        </div>
 
     </div>
 
