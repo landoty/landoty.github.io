@@ -14,8 +14,8 @@ latest_posts: true
 social: true  
 ---
 
-I am an undergraduate student at the University of Kansas, studying computer science with an emphasis in security. I am set to complete my undergraduate studies in the Spring of 2024 while also beginning my graduate studies under the direction of Dr. Prasad Kulkarni. 
+I am a graduate student at the University of Kansas, studying computer science with an emphasis in systems security and programming languages. I am currently working on a project evaluating the effect of source language on binary analysis tools - particularly, BSim, a binary similarity tool included in the Ghidra SRE Framework. I am advised by [Dr. Prasad Kulkarni](http://www.ittc.ku.edu/~kulkarni/) and am set to defend my Masters Thesis in the Spring of 2025!
 
-During my time at KU, I have discovered a passion for computer science as it relates to computer and systems security and have dedicated the majority of my young academic career pursuing these interests. Recently, I have found a specific interest in program anaylsis, software reverse engineering, and exploit development. 
+During my time at KU, I have discovered a passion for both security and programming languages, so I tend to spend time thinking about how language constructs and compilers affect certain security properties. I particularly enjoy building better tools for RE/VR practicioners, applying concepts from the PL community. I also do a bit of reverse engineering work and am currently working on my Offensive Security Exploit Developer certification.
 
-I am passionate about applying these interests to the security of critical software systems including general computing platforms as well as mobile, embedded, and real-time systems. After completing my degrees at KU, I intend on pursuing post-graduate work in a research and development role.
+Feel free to reach out if you are interested in collaborating!
