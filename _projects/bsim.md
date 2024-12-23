@@ -10,7 +10,7 @@ This work is an early-stage investigation on the effects of source language on b
 
 Further, the emergence of new systems programming languages has already demonstrated a unique challenge to binary analysts as unique, source-level code constructs manifest much differently in their generated binaries than those produced by languages like C. While ongoing work is underway to address these challenges, little (actually, none) has been done to determine if these issues cascade into binary similarity tools. 
 
-As such, my first research thrust as a Master's student is to do just that - **Asses the Effects of Source Language on Binary Similarity Tools**. We have completed a first stage of research towards this embedive and have submitted our work to a few peer-reviewed venues. Each submission is under review, so I include only the abstract and introduction here, but I hope to share the full work in the coming months. 
+As such, my first research thrust as a Master's student is to do just that - **Asses the Effects of Source Language on Binary Similarity Tools**. We have completed a first stage of research towards this objective and have submitted our work to a few peer-reviewed venues. Each submission is under review, so I include only the abstract and introduction here, but I hope to share the full work in the coming months. 
 
 Thanks for reading! 
 
