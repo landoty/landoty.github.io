@@ -14,4 +14,4 @@ As such, my first research thrust as a Master's student is to do just that - **A
 
 Thanks for reading! 
 
-<object data="/assets/files/binary-sim-lang-abstract.pdf" type="application/pdf" width="100%" height="900"></object>
+<object data="/assets/files/binary-sim-lang-abstract.pdf"  width="100%" height="900"></object>
