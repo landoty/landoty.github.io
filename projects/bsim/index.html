@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Evaluating BSim for Rust | Landen Doty</title>
+    <title>Assesing Source Language for Binary Similarity | Landen Doty</title>
     <meta name="author" content="Landen  Doty">
-    <meta name="description" content="Research project investigating effecicacy of Ghidra's BSim on Rust binaries">
+    <meta name="description" content="">
 
 
     <!-- Bootstrap & MDB -->
@@ -111,12 +110,20 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Evaluating BSim for Rust</h1>
-            <p class="post-description">Research project investigating effecicacy of Ghidra's BSim on Rust binaries</p>
+            <h1 class="post-title">Assesing Source Language for Binary Similarity</h1>
+            <p class="post-description"></p>
           </header>
 
           <article>
-            
+            <p>This work is an early-stage investigation on the effects of source language on binary similarity tools. These tools are used broadly across the binary analysis space to quickly identify similar or identical binary code segments. Without access to source code, binary similarity is a difficult problem as even the slightest of modification in software build processes - optimization, debugging, etc. - can cause significant changes to the generated code.</p>
+
+<p>Further, the emergence of new systems programming languages has already demonstrated a unique challenge to binary analysts as unique, source-level code constructs manifest much differently in their generated binaries than those produced by languages like C. While ongoing work is underway to address these challenges, little (actually, none) has been done to determine if these issues cascade into binary similarity tools.</p>
+
+<p>As such, my first research thrust as a Master’s student is to do just that - <strong>Asses the Effects of Source Language on Binary Similarity Tools</strong>. We have completed a first stage of research towards this objective and have submitted our work to a few peer-reviewed venues. Each submission is under review, so I include only the abstract and introduction here, but I hope to share the full work in the coming months.</p>
+
+<p>Thanks for reading!</p>
+
+<object data="/assets/files/binary-sim-lang-abstract.pdf" type="application/pdf" width="100%" height="900"></object>
 
           </article>
 
