@@ -12,6 +12,6 @@ Further, the emergence of new systems programming languages has already demonstr
 
 As such, my first research thrust as a Master's student is to do just that - **Asses the Effects of Source Language on Binary Similarity Tools**. We have completed a first stage of research towards this objective and have submitted our work to a few peer-reviewed venues. Each submission is under review, so I include only the abstract and introduction here, but I hope to share the full work in the coming months. 
 
-Thanks for reading! 
+Thanks for reading! There is a long-standing issue rendering embedded PDFs in static HTML - if you have issues reading the PDF (mostly on iOS and iPadOS), access it via the [Github repo](https://github.com/landoty/landoty.github.io/blob/master/assets/files/binary-sim-lang-abstract.pdf) 
 
 <embed src="/assets/files/binary-sim-lang-abstract.pdf"  width="100%" height="900">
