@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Assesing Source Language for Binary Similarity
+title: Assessing Source Language for Binary Similarity
 img: assets/img/bsim.png
 importance: 1
 category: security
