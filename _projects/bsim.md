@@ -14,4 +14,4 @@ As such, my first research thrust as a Master's student is to do just that - **A
 
 Thanks for reading! There is a long-standing issue rendering embedded PDFs in static HTML - if you have issues reading the PDF (mostly on iOS and iPadOS), access it via the [Github repo](https://github.com/landoty/landoty.github.io/blob/master/assets/files/binary-sim-lang-abstract.pdf) 
 
-<iframe src="http://docs.google.com/gview?url=https://landoty.github.io/assets/files/binary-sim-lang-abstract.pdf&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>
+<iframe src="https://docs.google.com/gview?url=https://landoty.github.io/assets/files/binary-sim-lang-abstract.pdf&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>
