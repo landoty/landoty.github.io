@@ -23,11 +23,15 @@
       year: May 2025
       description:
         - GPA (4.0)
-        - title: Enrolled for Spring 2024
+        - title: Relevant Coursework
           contents:
             - Mobile Security
             - Advanced Operating Systems
             - Software Modeling and Analysis
+            - Program Synthesis
+            - Advanced Data Science
+            - Machine Learning
+            - Programming Language Foundations
 
     - title: B.S. Computer Science
       institution: University of Kansas, Lawrence, Kansas
@@ -100,6 +104,9 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2025
+      items:
+      - I2S Student Research Symposium - 2nd Place Oral Presenations
     - year: 2024
       items:
       - Most Outstanding Senior in Computer Science
@@ -123,13 +130,13 @@
 - title: Leadership, Volunteering, and Involvement
   type: time_table
   contents:
-  - year: 2022 - Now
+  - year: 2022
     description:
       - 'Upsilon Pi Epsilon Honor Society'
       - 'Big Event at KU'
-  - year: 2021 - Now
+  - year: 2021 - 2023
     description:
       - "KU Information Security Club (President '22/23, CTO '21/22)"
-  - year: 2020 - Now
+  - year: 2020 - 2024
     description:
       - "Theta Chi Fraternity (Vice President '22/23, Scholarship Chairman '21/22)"
